@@ -10,6 +10,7 @@ twitter_username:
 github_username:  sschadwick
 facebook_username:
 
+gems: [jekyll-paginate]
 # Build settings
 markdown: kramdown
 highlighter: pygments
