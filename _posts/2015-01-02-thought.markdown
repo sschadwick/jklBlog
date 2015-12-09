@@ -6,7 +6,7 @@ date:       2015-06-04 12:00:00
 header-img: "img/post-bg-01.jpg"
 published:  true
 category:   "Thoughts"
-catname:    thoughts
+catname:    Thoughts
 ---
 
 <p>Please work now. Thank you.</p>
