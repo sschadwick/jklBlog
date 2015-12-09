@@ -5,11 +5,12 @@ header-img: img/home-bg.jpg
 email: sschadwick@gmail.com
 description: "This is an attempt at a blog"
 baseurl: ""
-url: "http://yourdomain.com"
+url: "http://104.131.138.183/"
 twitter_username:
 github_username:  sschadwick
 facebook_username:
 
+gems: [jekyll-paginate]
 # Build settings
 markdown: kramdown
 highlighter: pygments
