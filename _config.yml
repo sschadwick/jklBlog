@@ -4,11 +4,11 @@ subtitle: Let's turn a blind eye to the bugs
 header-img: img/home-bg.jpg
 email: sschadwick@gmail.com
 description: "This is an attempt at a blog"
-baseurl: "/blog"
+baseurl: ""
 url: "http://yourdomain.com"
-twitter_username: stevenschadwick
+twitter_username:
 github_username:  sschadwick
-facebook_username:  sschadwick
+facebook_username:
 
 # Build settings
 markdown: kramdown

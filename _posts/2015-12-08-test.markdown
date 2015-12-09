@@ -1,0 +1,10 @@
+---
+layout:     post
+title:      "The real deal"
+date:       2015-12-08 12:00:00
+header-img: "img/home-bg.jpg"
+published:  true
+category:   "Projects"
+---
+
+<p>This is a sample post. It isn't showing up on local for some reason.</p>

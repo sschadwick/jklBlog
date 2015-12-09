@@ -1,0 +1,11 @@
+---
+layout:     post
+title:      "Another Post?!"
+subtitle:   "Just work already"
+date:       2015-06-04 12:00:00
+header-img: "img/post-bg-01.jpg"
+published:  true
+category:   Projects
+---
+
+<p>Please work. Thank you.</p>
