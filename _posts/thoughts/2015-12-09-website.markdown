@@ -9,10 +9,11 @@ category:   Thoughts
 catname:    Thoughts
 ---
 
-<p>I decided to build a blog, following inspiration from [Union.io](http://blog.union.io/code/). The server is running Ubuntu on a Digital Ocean droplet, using Jekyll to serve static webpages along with the Start Bootstrap Clean Blog theme. This is a work in progress, and you can expect more features as development progresses.</p>
+<p>I decided to build a blog, following inspiration from [Union.io](http://blog.union.io/code/). The nginx server is running on a Digital Ocean droplet, using Jekyll to serve static webpages along with the Start Bootstrap Clean Blog theme. This is a work in progress, and you can expect more features as development progresses.</p>
 
 <ul>
-  <li>Register a domain name</li>
+  <li><s>Register a domain name</s></li>
   <li>Write a couple of interesting articles</li>
-  <li>Update background images, fonts, and color theme</li>
+  <li>Update <s>background images</s>, fonts, and color theme</li>
+  <li>Design a svg favicon</li>
 </ul>

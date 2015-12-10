@@ -1,9 +1,9 @@
 ---
 layout:     post
 title:      "File Locker"
-subtitle:   "A secure solution to storing documents in the cloud"
+subtitle:   "A secure solution for storing documents in the cloud"
 date:       2015-12-08 12:00:00
-header-img: "img/home-bg.jpg"
+header-img: "img/odd-1037935_960_720.jpg"
 published:  true
 category:   Projects
 catname:    Projects

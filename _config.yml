@@ -1,6 +1,5 @@
 # Site settings
 title: A Blog for Blobs
-header-img: img/home-bg.jpg
 email: sschadwick@gmail.com
 description: "Personal tech blog"
 baseurl: ""
