@@ -1,17 +1,16 @@
 # Site settings
 title: A Blog for Blobs
-subtitle: Let's turn a blind eye to the bugs
 header-img: img/home-bg.jpg
 email: sschadwick@gmail.com
-description: "This is an attempt at a blog"
+description: "Personal tech blog"
 baseurl: ""
 url: "http://104.131.138.183/"
 twitter_username:
 github_username:  sschadwick
 facebook_username:
 
-gems: [jekyll-paginate]
 # Build settings
+gems: [jekyll-paginate]
 markdown: kramdown
 highlighter: pygments
 permalink: pretty

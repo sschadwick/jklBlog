@@ -11,7 +11,7 @@ catname:    Projects
 
 [![Build Status](https://travis-ci.org/andrewmnelson/karaoke-jukebox.svg?branch=master)](https://travis-ci.org/andrewmnelson/karaoke-jukebox)
 
-Code repo is available at [github.com/sschadwick/file_locker](https://github.com/sschadwick/file_locker)
+Code repo is available at [github.com/sschadwick/karaoke-jukebox](https://github.com/sschadwick/karaoke-jukebox)
 
 Project is deployed on: [kjstage.herokuapp.com](https://kjstage.herokuapp.com/)
 
