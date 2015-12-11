@@ -32,8 +32,10 @@
 // If there are no errors, send the email
         if ($_POST['submit'] && $human === 5) {
             if (mail ($to, $subject, $body, $from)) {
+                $result = true;
                 echo '<p>Message sent!</p>'
             } else {
+                $result = false;
                 echo '<p>Something went wrong</p>'
             }
         }

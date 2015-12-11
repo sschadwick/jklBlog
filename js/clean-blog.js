@@ -35,6 +35,7 @@ $(function() {
                 data: {
                     name: name,
                     email: email,
+                    human: human,
                     message: message
                 },
                 cache: false,
