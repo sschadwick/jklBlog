@@ -16,4 +16,5 @@ catname:    Thoughts
   <li>Write a couple of interesting articles</li>
   <li>Update <s>background images</s>, fonts, and color theme</li>
   <li>Design a svg favicon</li>
+  <li>Fix contact form</li>
 </ul>
