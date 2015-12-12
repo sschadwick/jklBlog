@@ -53,6 +53,8 @@ header-img: "img/the-strategy-1080527_960_720.jpg"
 
 <?php
 // Check for empty fields
+mail('sschadwick@gmail.com', 'TEST', 'HI', 'From: noreply@stevenschadwick.com');
+
 if(empty($_POST['name'])        ||
    empty($_POST['email'])       ||
    empty($_POST['message']) ||
@@ -75,5 +77,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $result = false;
     }
-)
+}
 ?>
