@@ -64,7 +64,9 @@ $email_body = "You have received a new message from your website contact form.\n
 
 $headers = "From: noreply@stevenschadwick.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email"; 
-mail($to,$email,$email_body,$headers);
-return true;
-
+if(mail($to,$email,$email_body,$headers);) {
+    return true;
+} else {
+    return false;
+}
 ?>
