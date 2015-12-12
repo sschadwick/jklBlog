@@ -66,7 +66,5 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
 $headers .= 'From: noreply@stevenschadwick.com' . "\r\n";
 
-if ($_POST['human'] == 5) {
-    mail($to, $email, $email_body, $headers)
-}
+if(mail($to, $email_subject, $email_body, $headers)
 ?>
