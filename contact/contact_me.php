@@ -46,13 +46,25 @@ header-img: "img/the-strategy-1080527_960_720.jpg"
     </div>
     <div class="form-group">
         <div class="col-sm-10 col-sm-offset-2">
-            <?php phpinfo(); ?>
             <?php echo $result; ?>    
         </div>
     </div>
 </form>
 
 <?php
-    
-?>
 
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+    
+$to = 'sschadwick@gmail.com';
+$email_subject = "Website Contact Form:  $name";
+
+$email_body = "You have received a new message from your website contact form.\n\nHere are the details:\n\nName: " + $name + "\n\nEmail: " + $email_address + "\n\nPhone: " + $phone + "\n\nMessage:\n" + $message;
+
+$headers = "From: noreply@stevenschadwick.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+$headers .= "Reply-To: $email"; 
+mail($to,$email,$email_body,$headers);
+return true;
+
+?>
