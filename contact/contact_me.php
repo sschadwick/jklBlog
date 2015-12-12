@@ -53,19 +53,4 @@ header-img: "img/the-strategy-1080527_960_720.jpg"
 
 <?php
 mail('sschadwick@gmail.com', 'ITS WORKING??', 'I guess so', 'From: noreply@stevenschadwick.com');
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name    = stripslashes(trim($_POST['name']));
-    $email   = stripslashes(trim($_POST['email']));
-    $message = stripslashes(trim($_POST['message']));
-    $human   = stripslashes(trim($_POST['human']));
-
-    $to = 'sschadwick@gmail.com';
-    $email_subject = "Website Contact: " + $name;
-    $email_body = "You have received a new message from your website contact form.\n\nHere are the details:\n\nName: " + $name + "\n\nEmail: " + $email_address + "\n\nPhone: " + $phone + "\n\nMessage:\n" + $message;
-    $headers = 'From: noreply@stevenschadwick.com' . "\r\n" .
-    'Reply-To: noreply@stevenschadwick.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-    if ($human == '5') {
-        mail($to, $email_subject, $email_body, $headers);
-    }
 ?>
