@@ -1,3 +1,10 @@
+---
+layout: page
+title: Contact
+description: "Questions? Let's chat."
+header-img: "img/the-strategy-1080527_960_720.jpg"
+---
+
 <?php
 $subjectPrefix = '[Contato via Site]';
 $emailTo = '<YOUR_EMAIL_HERE>';
@@ -31,70 +38,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $hasError = true;
     }
 }
-?><!DOCTYPE html>
-<html>
-<head>
-    <title>Simple PHP Contact Form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
-</head>
-<body>
-    <div class="jumbotron">
-        <h1>Simple PHP Contact Form</h1>
-        <p>A Simple Contact Form developed in PHP with VanillaJS Form validation.</p>
-    </div>
-    <?php if(!empty($emailSent)): ?>
-        <div class="col-md-6 col-md-offset-3">
-            <div class="alert alert-success text-center">Sua mensagem foi enviada com sucesso.</div>
-        </div>
-    <?php else: ?>
-        <?php if(!empty($hasError)): ?>
-        <div class="col-md-5 col-md-offset-4">
-            <div class="alert alert-danger text-center">Houve um erro no envio, tente novamente mais tarde.</div>
-        </div>
-        <?php endif; ?>
-
-    <div class="col-md-6 col-md-offset-3">
-        <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" id="contact-form" class="form-horizontal" role="form" method="post">
-            <div class="form-group">
-                <label for="name" class="col-lg-2 control-label">Nome</label>
-                <div class="col-lg-10">
-                    <input type="text" class="form-control required" id="form-name" name="form-name" placeholder="Nome" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="email" class="col-lg-2 control-label">Email</label>
-                <div class="col-lg-10">
-                    <input type="email" class="form-control required" id="form-email" name="form-email" placeholder="Email" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="tel" class="col-lg-2 control-label">Telefone</label>
-                <div class="col-lg-10">
-                    <input type="tel" class="form-control" id="form-tel" name="form-tel" placeholder="Telefone">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="assunto" class="col-lg-2 control-label">Assunto</label>
-                <div class="col-lg-10">
-                    <input type="text" class="form-control required" id="form-subject" name="form-subject" placeholder="Assunto" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="mensagem" class="col-lg-2 control-label">Mensagem</label>
-                <div class="col-lg-10">
-                    <textarea class="form-control required" rows="3" id="form-message" name="form-message" placeholder="Mensagem" /></textarea>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-lg-offset-2 col-lg-10">
-                    <button type="submit" class="btn btn-default">Enviar</button>
-                </div>
-            </div>
-        </form>
-    </div>
-    <?php endif; ?>
-
-    <script type="text/javascript" src="assets/js/contact-form.js"></script>
-</body>
-</html>
+?>
