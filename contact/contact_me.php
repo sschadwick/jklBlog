@@ -58,13 +58,15 @@ $email = $_POST['email'];
 $message = $_POST['message'];
     
 $to = 'sschadwick@gmail.com';
-$email_subject = "Website Contact Form:  $name";
+$email_subject = "Website Contact Form: $name";
 
 $email_body = "You have received a new message from your website contact form.\n\nHere are the details:\n\nName: " + $name + "\n\nEmail: " + $email_address + "\n\nPhone: " + $phone + "\n\nMessage:\n" + $message;
 
-$headers = "From: noreply@stevenschadwick.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email"; 
-if(mail($to,$email,$email_body,$headers);) {
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
+$headers .= 'From: noreply@stevenschadwick.com' . "\r\n";
+
+if(mail($to,$email,$email_body,$headers)) {
     return true;
 } else {
     return false;
