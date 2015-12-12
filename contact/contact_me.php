@@ -52,7 +52,7 @@ header-img: "img/the-strategy-1080527_960_720.jpg"
 </form>
 
 <?php
-
+mail('sschadwick@gmail.com', 'ITS WORKING??', 'I guess so', 'From: noreply@stevenschadwick.com');
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name    = stripslashes(trim($_POST['name']));
     $email   = stripslashes(trim($_POST['email']));
