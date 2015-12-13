@@ -3,7 +3,7 @@ layout:     post
 title:      "K-Vox"
 subtitle:   "Karaoke player and room management system"
 date:       2015-12-09 12:00:00
-header-img: "img/post-bg-01.jpg"
+header-img: "img/concert-923245_960_720.jpg"
 published:  true
 category:   Projects
 catname:    Projects
