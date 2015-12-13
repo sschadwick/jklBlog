@@ -1,7 +1,7 @@
 <?php
 
 // On submit, build the email and send it
-if (isset($_POST["submit"])) {
+
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
@@ -24,12 +24,11 @@ if (isset($_POST["submit"])) {
     // Build the headers
     $headers = "From: noreply@stevenschadwick.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
     $headers .= "Reply-To: $email_address";
-    if (!$errName && !$errEmail && !$errMessage) {
         if (mail($to, $email_subject, $email_body, $headers)) {
             $result = true;
         } else {
             $result = false;
         }
-    }
-}
+    
+
 ?>
