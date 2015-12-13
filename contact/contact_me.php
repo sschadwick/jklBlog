@@ -1,25 +1,35 @@
-
 <?php
-// Check for empty fields
-if(empty($_POST['name'])        ||
-   empty($_POST['email'])       ||
-   empty($_POST['message']) ||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   {
-    echo "No arguments Provided!";
-    return false;
-   }
+
+// On submit, build the email and send it
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = $_POST['name'];
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $message = $_POST['message'];
+    $human = intval($_POST['human']);
+    $to = 'sschadwick@gmail.com';
+    $email_subject = "Website Contact:  $name";
     
-$name = $_POST['name'];
-$email_address = $_POST['email'];
-$message = $_POST['message'];
-    
-// Create the email and send the message
-$to = 'sschadwick@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nMessage:\n$message";
-$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address"; 
-mail($to,$email_subject,$email_body,$headers);
-return true;            
+    $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nMessage:\n$message";
+
+    if (!$_POST['name']) {
+        $errName = 'Please enter your name';
+    }
+    if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $errEmail = 'Please enter a valid email address';
+    }
+    if (!$_POST['message']) {
+        $errMessage = 'Please enter your message';
+    }
+
+    // Build the headers
+    $headers = "From: noreply@stevenschadwick.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+    $headers .= "Reply-To: $email_address";
+    if (!$errName && !$errEmail && !$errMessage) {
+        if (mail($to, $email_subject, $email_body, $headers)) {
+            $result = '<p>IT WORKS</p>';
+        } else {
+            $result = '<p>IT BROKE</p>';
+        }
+    }
+
 ?>
