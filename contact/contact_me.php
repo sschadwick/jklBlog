@@ -11,15 +11,15 @@ if(empty($_POST['name'])        ||
     
 $name = $_POST['name'];
 $email_address = $_POST['email'];
-$phone = $_POST['phone'];
+$human = $_POST['human'];
 $message = $_POST['message'];
     
 $to = 'sschadwick@gmail.com';
 $email_subject = "Website Contact:  $name";
-$email_body = "Name: $name\n\nEmail: $email_address\n\nMessage:\n$message";
+$email_body = "$name\n\n$email_address\n\n$message";
 $headers = "From: noreply@stevenschadwick.com\n";
 $headers .= "Reply-To: $email_address"; 
-if(mail($to,$email_subject,$email_body,$headers)) {
+if($human == '5' && mail($to,$email_subject,$email_body,$headers)) {
     return true;
 }
 return false;            
