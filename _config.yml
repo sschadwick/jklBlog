@@ -8,6 +8,7 @@ twitter_username:
 github_username:  sschadwick
 facebook_username:
 linkedin_username: stevenschadwick
+bitcoin_address: 1LjHyGU74eW4yhrG88kJGk426v6RyjDn2a
 
 # Build settings
 gems: [jekyll-paginate]
