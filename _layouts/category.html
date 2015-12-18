@@ -35,7 +35,7 @@ layout: default
                         </h3>
                         {% endif %}
                     </a>
-                    <p class="post-meta">Published {% if post.category %}in {{ post.category }}, {% endif %}on {{ post.date | date: "%B %-d, %Y" }}</p>
+                    <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
                 </div>
                 <hr>
             {% endfor %}

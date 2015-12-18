@@ -15,7 +15,7 @@ header-img: "img/new-york-14480_960_720.jpg"
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }} in {{ post.category }}</p>
+    <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }} in {{ post.category }}</p>
 </div>
 <hr>
 {% endfor %}
