@@ -17,4 +17,5 @@ catname:    Thoughts
   <li>Update <s>background images</s>, fonts, and color theme</li>
   <li>Design a svg favicon</li>
   <li><s>Fix contact form</s></li>
+  <li><s>Add HTTPS support</s></li>
 </ul>

@@ -12,13 +12,14 @@ catname:    Thoughts
 After reading an article about the revolutionary Let's Encrypt certificate authority, I felt compelled to do my part towards making the web a safer place and resolved to add HTTPS to my site.
 
 https://letsencrypt.org
+
 https://alexanderbell.info/2015/11/install-lets-encrypt-ssl-certificates-nginx/
 
 Let's Encrypt is an effort of the Electronic Frontier Foundation to protect the web from surveillance and censorship by encrypting as much web traffic as possible. To do this, they established the Let's Encrypt Certificate Authority (CA) to freely create new certificates, a service that has historically been charged for. Since Let's Encrypt has been cross-signed by IdentTrust, it's certificates (such as mine!) are now trusted by modern web browsers. 
 
 The process of switching from HTTP to HTTPS was fairly simple in itself, consisting of only two main steps. First, obtain a certificate; and second, configure nginx to use the certificate and redirect insecure requests to HTTPS.
 
-Getting a certificate from Let's Encrypt was as simple as running a few commands. First, we have to clone the repo
+Getting a certificate from Let's Encrypt was as simple as running a few commands. First, we have to clone the repo and cd into it:
 
 ```$ git clone https://github.com/letsencrypt/letsencrypt```
 
@@ -26,8 +27,15 @@ Getting a certificate from Let's Encrypt was as simple as running a few commands
 
 Let's Encrypt has an automatic installation function, however this currently only works for Apache (with nginx support on the way!).
 
+Use the following command to generate the certificates for nginx in ```/etc/letsencrypt/live/YOURSITE.com/```
 
-
+```
+./letsencrypt-auto certonly \
+-a standalone \
+-d www.YOURSITE.com \
+-d YOURSITE.com \
+--server https://acme-v01.api.letsencrypt.org/directory
+```
 
 Once we have generated the certificates, we have to tell nginx to use them to establish a secure connection with clients. Let's modify the server config:
 
