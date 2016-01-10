@@ -11,9 +11,9 @@ catname:    Thoughts
 
 After reading an article about the revolutionary Let's Encrypt certificate authority, I felt compelled to do my part towards making the web a safer place and resolved to add HTTPS to my site.
 
-Major credit goes to:
+Major credit for making this possible goes to
 [Let's Encrypt Certificate Authority](https://letsencrypt.org) and
-[Install Let's Encrypt SSL Certificates nginx](https://alexanderbell.info/2015/11/install-lets-encrypt-ssl-certificates-nginx/)
+[Install Let's Encrypt SSL Certificates nginx](https://alexanderbell.info/2015/11/install-lets-encrypt-ssl-certificates-nginx/).
 
 Let's Encrypt is an effort of the Electronic Frontier Foundation to protect the web from surveillance and censorship by encrypting as much web traffic as possible. To do this, they established the Let's Encrypt Certificate Authority (CA) to freely create new certificates, a service that has historically been charged for. Since Let's Encrypt has been cross-signed by IdentTrust, it's certificates (such as mine!) are now trusted by modern web browsers. 
 
@@ -51,7 +51,7 @@ Let's generate our own DH parameters while we're at it instead of using the defa
 
 ```$ sudo openssl dhparam 2048 -out /etc/ssl/private/dhparams.pem```
 
-Now let's reload nginx
+Now let's reload nginx:
 
 ```$ sudo service nginx reload```
 

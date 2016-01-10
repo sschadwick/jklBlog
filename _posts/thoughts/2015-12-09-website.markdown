@@ -3,19 +3,19 @@ layout:     post
 title:      "I built a personal website"
 subtitle:   "And you can too"
 date:       2015-12-09 16:46:00
-header-img: "img/post-bg-01.jpg"
+header-img: "img/earth-11595_960_720.jpg"
 published:  true
 category:   Thoughts
 catname:    Thoughts
 ---
 
-<p>I decided to build a blog, following inspiration from [Union.io](http://blog.union.io/code/). The nginx server is running on a Digital Ocean droplet, using Jekyll to serve static webpages along with the Start Bootstrap Clean Blog theme. This is a work in progress, and you can expect more features as development progresses.</p>
+<p>I decided to build a blog, following inspiration from 
+<a href="http://blog.union.io/code/">Union.io</a>. The nginx server is running on a Digital Ocean droplet, using Jekyll to serve static webpages along with the Start Bootstrap Clean Blog theme. This is a work in progress, and here are the things I've accomplished so far.</p>
 
 <ul>
-  <li><s>Register a domain name</s></li>
-  <li>Write a couple of interesting articles</li>
-  <li>Update <s>background images</s>, fonts, and color theme</li>
-  <li>Design a svg favicon</li>
-  <li><s>Fix contact form</s></li>
-  <li><s>Add HTTPS support</s></li>
+  <li>Created a blog using jekyll</li>
+  <li>Built the contact form in PHP</li>
+  <li>Rented a droplet on Digital Ocean</li>
+  <li>Added all of my previous work</li>
+  <li>Added and optimized HTTPS to my droplet</li>
 </ul>
