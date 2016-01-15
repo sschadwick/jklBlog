@@ -16,6 +16,7 @@ catname:    Thoughts
   <li>Created a blog using jekyll</li>
   <li>Built the contact form in PHP</li>
   <li>Rented a droplet on Digital Ocean</li>
-  <li>Added all of my previous work</li>
-  <li>Added and optimized HTTPS to my droplet</li>
+  <li>Added my previous work</li>
+  <li>Added and optimized TLS using Let's Encrypt</li>
+  <li>Wrote a cron to update TLS certs bimonthly</li>
 </ul>
