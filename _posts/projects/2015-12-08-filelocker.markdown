@@ -11,7 +11,7 @@ catname:    Projects
 
 [![Build Status](https://travis-ci.org/sschadwick/file_locker.svg)](https://travis-ci.org/sschadwick/file_locker)
 
-The code repo is available at: [github.comsschadwick/file_locker](https://github.com/sschadwick/file_locker/)
+The code repo is available at: [github.com/sschadwick/file_locker](https://github.com/sschadwick/file_locker/)
 
 The app is hosted at: [file-locker.herokuapp.com](https://file-locker.herokuapp.com/)
 
