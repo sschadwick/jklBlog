@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<style>
+
+#chart rect {
+  fill: steelblue;
+}
+
+#chart text {
+  fill: black;
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+</style>
+<select id='gender'>
+  <option value='male' selected>Male</option>
+  <option value='female'>Female</option>
+  <option value='both'>Both</option>
+</select></br>
+<svg id='chart'></svg>
+<script src='//d3js.org/d3.v3.min.js' charset='utf-8'></script>
+<script>
+
+var margin = {
+  top: 20,
+  left: 40,
+  bottom: 40,
+  right: 20
+};
+var w = window.innerWidth - (margin.left + margin.right);
+var h = window.innerHeight - 2 * (margin.top + margin.bottom);
+
+var gender = document.getElementById('gender');
+var chart = document.getElementById('chart');
+
+d3.csv('IHME_GBD_2013_OBESITY_PREVALENCE_1990_2013_Y2014M10D08.csv', function(csv) {
+
+  function initGraph() {    
+
+    // remove any prior visualization
+    while (chart.firstChild) {
+      chart.removeChild(chart.firstChild);
+    }
+
+  var data = d3.nest()
+    .key(function(d) { return d.year; })
+    .sortKeys(d3.ascending)
+    .entries(csv);
+
+    var meanArr = [];
+    for (var i in data) { // for each year..
+      meanArr.push(d3.mean(data[i].values.filter(function(d) {
+        return d.sex == gender.value;
+      }).map(function(d) {
+        return +d.mean; // find avg mean
+      })));
+    }
+
+  // SVG container
+  var svg = d3.select('#chart')
+    .attr({
+        'width': w + (margin.left + margin.right),
+        'height': h + (margin.top + margin.bottom)
+    })
+    .append('g')
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+  var x = d3.scale.ordinal().rangeRoundBands([0, w], 0.1)
+    .domain(data.map(function(d) { return d.key; }));
+  
+  var y = d3.scale.linear()
+    .range([h, 0])
+    .domain([0.2, 0.33]);
+
+  // Axes
+  var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient('bottom')
+    .ticks(data.length);
+
+  var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient('left')
+    .ticks(4);
+
+  svg.append('g')
+    .attr('class', 'axis')
+    .attr('transform', 'translate(0,' + h + ')')
+    .call(xAxis)
+    .append('text')
+    .attr('x', w / 2)
+    .attr('y', 2 * margin.top)
+    .style('font-size', '14px')
+    .style('text-anchor', 'middle')
+    .text('Year');
+
+  svg.append('g')
+    .attr('class', 'axis')
+    .call(yAxis)
+    .append('text')
+    .attr('transform', 'rotate(-90)')
+    .attr('y', 6)
+    .attr('dy', '.71em')
+    .style('font-size', '14px')
+    .style('text-anchor', 'end')
+    .text('Prevalence (Frequency)');
+
+  // Bars
+  svg.selectAll('bar')
+    .data(data)
+    .enter()
+    .append('rect')
+    .attr('class', 'bar')
+    .attr('x', function(d, i) { return x(d.key); })
+    .attr('width', x.rangeBand())
+    .attr('y', function(d, i) { return y(meanArr[i]); }) // y value of bar
+    .attr('height', function(d, i) {return h - y(meanArr[i]); }); // bar height
+
+  // Title
+  svg.append('text')
+    .attr('x', w / 2 )
+    .attr('y', (margin.top / 2))
+    .style('text-anchor', 'middle')
+    .style('font-size', '16px')
+    .style('text-decoration', 'underline')
+    .text('Average Prevalence of Overweight and Obese Males/Females for Years 1990-2013');
+  }
+
+  gender.addEventListener('change', function() {
+    initGraph();
+  });
+
+  initGraph();
+});
+
+
+</script>
