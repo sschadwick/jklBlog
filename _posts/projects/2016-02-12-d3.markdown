@@ -1,0 +1,22 @@
+---
+layout:     post
+title:      "IHME Obesity Prevalence"
+subtitle:   "Using D3.js to tell a story"
+date:       2016-02-12 12:00:00
+header-img: "img/graph-163509_960_720.jpg"
+published:  true
+category:   Projects
+catname:    Projects
+---
+
+# D3.js Visualization of Obesity Prevalence data from IHME
+
+This app uses D3.js to analyze worldwide obesity prevalence data provided by IHME. There are options for filtering the data by metric (overweight or obese), gender (male or female), and country (dynamically populated from countries in dataset). The data can be visualized with either a relative or absolute scale. The title of the graph is dynamically generated depending on the filtering conditions.
+
+App deployment (takes ~1 minute to fully load): [radiant-estuary-12916.herokuapp.com/](https://radiant-estuary-12916.herokuapp.com/)
+
+Repository available: [github.com/sschadwick/ihme-obesity-prevalence](https://github.com/sschadwick/ihme-obesity-prevalence)
+
+![IHME1](/img/posts/ihme-default.jpg "Default visualization")
+
+Global Burden of Disease Study 2013. Global Burden of Disease Study 2013 (GBD 2013) Obesity Prevalence 1990-2013. Seattle, United States: Institute for Health Metrics and Evaluation (IHME), 2014.

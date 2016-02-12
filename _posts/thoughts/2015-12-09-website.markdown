@@ -19,4 +19,5 @@ catname:    Thoughts
   <li>Added my previous work</li>
   <li>Added and optimized TLS using Let's Encrypt</li>
   <li>Wrote a cron to update TLS certs bimonthly</li>
+  <li>Added a favicon</li>
 </ul>

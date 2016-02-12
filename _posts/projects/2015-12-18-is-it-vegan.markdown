@@ -4,7 +4,7 @@ title:      "Is It Vegan?"
 subtitle:   "A work in progress"
 date:       2015-12-18 12:00:00
 header-img: "img/vegetables-449950_960_720.jpg"
-published:  true
+published:  false
 category:   Projects
 catname:    Projects
 ---
