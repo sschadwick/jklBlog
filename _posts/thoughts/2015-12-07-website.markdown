@@ -2,7 +2,7 @@
 layout:     post
 title:      "I built a personal website"
 subtitle:   "And you can too"
-date:       2015-12-09 16:46:00
+date:       2015-12-07 16:46:00
 header-img: "img/earth-11595_960_720.jpg"
 published:  true
 category:   Thoughts
@@ -19,5 +19,5 @@ catname:    Thoughts
   <li>Added my previous work</li>
   <li>Added and optimized TLS using Let's Encrypt</li>
   <li>Wrote a cron to update TLS certs bimonthly</li>
-  <li>Added a favicon</li>
+  <li>Added an svg favicon</li>
 </ul>
