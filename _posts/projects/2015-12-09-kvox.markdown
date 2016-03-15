@@ -1,29 +1,21 @@
 ---
 layout:     post
 title:      "K-Vox"
-subtitle:   "Karaoke player and room management system"
+subtitle:   "Karaoke Player and Room Management System"
 date:       2015-12-09 12:00:00
 header-img: "img/concert-923245_960_720.jpg"
 published:  true
 category:   Projects
 catname:    Projects
 ---
-
 [![Build Status](https://travis-ci.org/sschadwick/karaoke-jukebox.svg?branch=master)](https://travis-ci.org/sschadwick/karaoke-jukebox)
 
 Code repo is available at [github.com/sschadwick/karaoke-jukebox](https://github.com/sschadwick/karaoke-jukebox)
 
 Project is deployed on: [kvox.herokuapp.com](https://kvox.herokuapp.com/)
 
-Mp3's must be hosted locally using Node.js:
-
-```node mp3server/mp3server.js```
-
-Note: mp3's are not provided in this demo for copyright reasons.
-
 The lyrics and timing are hard-coded for the Yellow Submarine and Rainbow Connection examples.
 
-### Karaoke Player and Room Management System
 This app is designed to be used by a karaoke host. When patrons are linked to the app (typically a link on a poster in a bar) and click Sign In, they are assigned a unique id and given a QR code containing their id.
 
 ![QR Code](https://raw.githubusercontent.com/sschadwick/karaoke-jukebox/master/docs/Demo/IMG_0074.PNG "Patron's Generated QR Code")
