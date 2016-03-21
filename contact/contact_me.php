@@ -11,7 +11,6 @@ if(empty($_POST['name'])        ||
     
 $name = $_POST['name'];
 $email_address = $_POST['email'];
-$human = $_POST['human'];
 $message = $_POST['message'];
     
 $to = 'sschadwick@gmail.com';
@@ -19,7 +18,7 @@ $email_subject = "Website Contact:  $name";
 $email_body = "$name\n\n$email_address\n\n$message";
 $headers = "From: noreply@stevenschadwick.com\n";
 $headers .= "Reply-To: $email_address"; 
-if($human == '5' && mail($to,$email_subject,$email_body,$headers)) {
+if(mail($to,$email_subject,$email_body,$headers)) {
     return true;
 }
 return false;            
