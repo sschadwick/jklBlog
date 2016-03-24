@@ -7,7 +7,9 @@ header-img: "img/concert-923245_960_720.jpg"
 published:  true
 category:   Projects
 catname:    Projects
+permalink:  /projects/kvox/
 ---
+
 [![Build Status](https://travis-ci.org/sschadwick/karaoke-jukebox.svg?branch=master)](https://travis-ci.org/sschadwick/karaoke-jukebox)
 
 Code repo is available at [github.com/sschadwick/karaoke-jukebox](https://github.com/sschadwick/karaoke-jukebox)

@@ -7,6 +7,7 @@ header-img: "img/graph-163509_960_720.jpg"
 published:  true
 category:   Projects
 catname:    Projects
+permalink:  /projects/d3/
 ---
 
 # D3.js Visualization of Obesity Prevalence data from IHME

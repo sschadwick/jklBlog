@@ -7,6 +7,7 @@ header-img: "img/odd-1037935_960_720.jpg"
 published:  true
 category:   Projects
 catname:    Projects
+permalink:  /projects/filelocker/
 ---
 
 [![Build Status](https://travis-ci.org/sschadwick/file_locker.svg)](https://travis-ci.org/sschadwick/file_locker)

@@ -7,6 +7,7 @@ header-img: "img/castle-505878_960_720.jpg"
 published:  true
 category:   Thoughts
 catname:    Thoughts
+permalink:  /thoughts/ssl/
 ---
 
 After reading an article about the revolutionary Let's Encrypt certificate authority, I felt compelled to do my part towards making the web a safer place and resolved to add HTTPS to my site.
